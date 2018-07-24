@@ -1,6 +1,6 @@
 const aws4 = require('aws4')
 
-function createPresignedURL (
+module.exports = (
   {
     host = process.env.AWS_IOT_HOST,
     path = '/mqtt',
@@ -11,7 +11,7 @@ function createPresignedURL (
     sessionToken = process.env.AWS_SESSION_TOKEN
     // expires = 0, // @TODO: 300, check if this is working http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html
   } = {}
-) {
+) => {
   const signed = aws4.sign(
     {
       host,
