@@ -1,0 +1,9 @@
+{
+  "name": "aws-presign",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws4": "^1.7.0"
+  }
+}
